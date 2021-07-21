@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:nuprego/login.dart';
-import 'package:nuprego/page.dart';
+import 'package:lit_firebase_auth/lit_firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
+main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: <String, WidgetBuilder>{
-        '/page': (BuildContext context) => new Page(),
-      },
-      home: Login(),
+    return LitAuthInit(
+      authProviders: AuthProviders(emailAndPassword: true, google: true),
+      child: MaterialApp(
+        home: LitAuthState(
+          //chamada para as telas que serão criadas
+          authenticated: HomePage(),
+          unauthenticated: LoginPage(),
+        ),
+      ),
     );
   }
 }
