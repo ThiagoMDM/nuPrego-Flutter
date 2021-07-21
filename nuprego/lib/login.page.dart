@@ -30,10 +30,10 @@ class _LoginPageState extends State<LoginPage> {
                 //adcionei a definição de TEXT no keyboard para o dispositivo trazer o tipo de caractere exigito para usuário e senha.
                 autofocus: true,
                 keyboardType: TextInputType.text,
-                style: new TextStyle(color: Colors.white, fontSize: 20),
+                style: new TextStyle(color: Colors.white, fontSize: 10),
                 decoration: InputDecoration(
                     labelText: "Login",
-                    labelStyle: TextStyle(color: Colors.white, fontSize: 30)),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20)),
               ),
               //Aqui coloquei o Divider para separar um pouco mais os campos.
               Divider(),
@@ -42,10 +42,10 @@ class _LoginPageState extends State<LoginPage> {
                 //Obscure Text para esconder os caracteres de Digitação de senha.
                 obscureText: true,
                 keyboardType: TextInputType.number,
-                style: new TextStyle(color: Colors.white, fontSize: 20),
+                style: new TextStyle(color: Colors.white, fontSize: 10),
                 decoration: InputDecoration(
                     labelText: "Senha",
-                    labelStyle: TextStyle(color: Colors.white, fontSize: 30)),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 20)),
               ),
               Divider(),
               Divider(),
