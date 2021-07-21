@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
 
-            //Criei o Widget lista para inserir os nomes e os campos de input.
+            
             children: <Widget>[
               TextFormField(
                 //autofocus para causar o efeito de clique para exibir qual campo está ativo.
