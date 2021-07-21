@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
       // Aqui fiz o padding e coloquei em sequencia os alinhamentos
       //e alinhei a coluna centralizando para ficar com alinhamento
       //perfeito central no app.
-      backgroundColor: Colors.lightGreen,
+      backgroundColor: Colors.blue,
       body: Padding(
         padding: EdgeInsets.all(10),
         child: Center(
@@ -47,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                     labelText: "Senha",
                     labelStyle: TextStyle(color: Colors.white, fontSize: 30)),
               ),
+              Divider(),
               Divider(),
               //Aqui defini o Botão com a altura fixada em 60.00 já que a largura está Stretch.
               ButtonTheme(
